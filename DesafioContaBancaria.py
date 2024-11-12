@@ -1,3 +1,7 @@
+from datetime import datetime
+import datetime as dtq
+
+
 menu = """
 
 [d] Depositar
@@ -11,7 +15,7 @@ saldo = 0
 limite = 500
 extrato = ""
 numero_saques = 0
-LIMITE_SAQUES = 3
+LIMITE_SAQUES = 10
 
 while True:
 
@@ -38,9 +42,9 @@ while True:
                     saldo -= saque
                     numero_saques += 1
                 else:
-                    print("Não é possivel sacar mais de R$ 500,00 por vez, por favor, realize outra operação.")
+                    print("Valor excede quantidade na conta. por favor, realize outra operação.")
             else:
-                print("Valor excede quantidade na conta. por favor, realize outra operação.")
+                print("Não é possivel sacar mais de R$ 500,00 por vez, por favor, realize outra operação.")
 
         else:
             print("Numero máximo de saques por dia permitido. Por favor, realize outra operação.")
