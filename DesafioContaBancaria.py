@@ -33,6 +33,14 @@ def saque(valor_saque):
     else:
         print("Numero máximo de saques por dia permitido. Por favor, realize outra operação.")
 
+def Extrato():
+    global extrato
+    print("################Extrato#########")
+    if(extrato == ""):
+        print("Nenhum deposito realizado.")
+    else:
+        print(extrato)
+    return 
 menu = """
 
 [d] Depositar
@@ -65,11 +73,8 @@ while True:
        saque(valor_saque)
 
     elif opcao == "e":
-        print("################Extrato#########")
-        if(extrato == ""):
-            print("Nenhum deposito realizado.")
-        else:
-            print(extrato)
+
+        Extrato()
 
         print(f"O valor em sua conta é: R$ {saldo:.2f}")
     elif opcao == "q":
